@@ -1,0 +1,54 @@
+package package1;
+
+//import java.util.Scanner;
+
+public class SumTwoIntegers {
+	public static void main(String args[]){
+		//Scanner sc = new Scanner(System.in);
+		int array[] = {2, 7, 11, 15};
+		int x = 9;
+		
+		//System.out.println(twoSum(array, x));
+		twoSum(array, x);
+	}
+	
+	public static void twoSum(int[] nums, int target){
+		
+		boolean found = false;
+		
+		int x;
+		int a = 0;
+		int i = 1;
+		
+		while(!found){
+			
+			x = nums[a];
+			
+			if(x+nums[i]==target){
+				System.out.println("Found!");
+				int first = a;
+				int second = i;
+				System.out.println(first + ", " + second);
+				found = true;
+			}else{
+				i++;
+			}
+			
+			//if the length of i is the length of the array
+			if(i==nums.length){
+				i=0;
+				a++;
+			}
+			
+			//if the x is the length of the array
+			if(a==nums.length){
+				System.out.println("Not found!");
+				break;
+			}
+			
+		}
+		
+		//return nums;
+	}
+	
+}
