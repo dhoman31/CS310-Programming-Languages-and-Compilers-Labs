@@ -1,0 +1,24 @@
+package package1;
+
+import java.util.Scanner;
+
+public class Palindrome {
+	public static void main(String args[]){
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter string now.. ");
+		String s = sc.nextLine();
+		String rev = "";
+		
+		//reverse string
+		for(int i=s.length()-1; i>=0; i--){
+			rev+=s.charAt(i);
+		}
+		
+		if(s.compareTo(rev)== 0){
+			System.out.println("Equal/Is a palindrome");
+		}else{
+			System.out.println("Not a palindrome");
+		}
+		sc.close();
+	}
+}
